@@ -426,44 +426,75 @@
     var sections = links
       .map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); })
       .filter(Boolean);
+    var bar = $("#progress");
+    var activeId = null;
+    var lockedToClick = false;
+    var idleTimer = null;
+    var ticking = false;
 
-    if ("IntersectionObserver" in window) {
-      var visible = {};
-      var io = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (e) {
-            visible[e.target.id] = e.isIntersecting;
-          });
-          var current = sections.filter(function (s) { return visible[s.id]; })[0];
-          links.forEach(function (a) {
-            if (current && a.getAttribute("href") === "#" + current.id) {
-              a.setAttribute("aria-current", "true");
-              // On narrow screens the nav scrolls sideways; keep the active link visible.
-              if (nav.scrollWidth > nav.clientWidth) {
-                var left = a.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft - 16;
-                nav.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
-              }
-            } else {
-              a.removeAttribute("aria-current");
-            }
-          });
-        },
-        { rootMargin: "-45% 0px -50% 0px" }
-      );
-      sections.forEach(function (s) { io.observe(s); });
+    function setActive(id) {
+      if (id === activeId) return;
+      activeId = id;
+      links.forEach(function (a) {
+        if (id && a.getAttribute("href") === "#" + id) {
+          a.setAttribute("aria-current", "true");
+          // On narrow screens the nav scrolls sideways; keep the active link visible.
+          if (nav.scrollWidth > nav.clientWidth) {
+            var left = a.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft - 16;
+            nav.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+          }
+        } else {
+          a.removeAttribute("aria-current");
+        }
+      });
     }
 
-    var bar = $("#progress");
-    var ticking = false;
+    // The current section is the last one whose top has passed a line just below the sticky
+    // header. Measuring positions directly (rather than an IntersectionObserver rootMargin)
+    // also works when the page is embedded in a frame, where browsers ignore rootMargin.
+    function sectionInView() {
+      var padding = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+      var line = Math.max(padding + 8, window.innerHeight * 0.3);
+      var current = null;
+      sections.forEach(function (s) {
+        if (s.getBoundingClientRect().top <= line) current = s;
+      });
+      var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom) current = sections[sections.length - 1];
+      return current ? current.id : null;
+    }
+
     function update() {
+      ticking = false;
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
       bar.style.transform = "scaleX(" + ratio + ")";
-      ticking = false;
+      if (!lockedToClick) setActive(sectionInView());
     }
+
+    function release() {
+      lockedToClick = false;
+      update();
+    }
+
+    // After a nav click, highlight the chosen section straight away and hold it until the
+    // smooth scroll settles, so the sections passed on the way don't flash.
+    links.forEach(function (a) {
+      a.addEventListener("click", function () {
+        setActive(a.getAttribute("href").slice(1));
+        lockedToClick = true;
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(release, 1000);
+      });
+    });
+
     window.addEventListener(
       "scroll",
       function () {
+        if (lockedToClick) {
+          clearTimeout(idleTimer);
+          idleTimer = setTimeout(release, 150);
+        }
         if (!ticking) {
           ticking = true;
           window.requestAnimationFrame(update);
@@ -471,6 +502,7 @@
       },
       { passive: true }
     );
+    window.addEventListener("resize", update);
     update();
   }
 
