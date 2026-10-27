@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ReuNews</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <meta
+      name="description"
+      content="ReuNews analyses this week's economic, finance and business news and explains what it means for individuals, investors and businesses."
+    />
+    <meta name="theme-color" content="#23104a" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2323104a'/%3E%3Cpath d='M7 22l6-7 5 4 7-9' stroke='%23facc15' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      // Apply a saved theme before first paint to avoid a flash.
+      try {
+        var saved = localStorage.getItem("reunews-theme");
+        if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="strip" role="note">
+      <div class="wrap">
+        <span><strong>Not financial advice.</strong> ReuNews is educational analysis. Any investing you do is at your own risk.</span>
+        <a href="#disclaimer">Read the full disclaimer</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="ReuNews home"><span class="brand-reu">Reu</span>News</a>
+        <nav class="nav" aria-label="Sections">
+          <ul>
+            <li><a href="#pulse">Pulse</a></li>
+            <li><a href="#week">This week</a></li>
+            <li><a href="#economy">Economy</a></li>
+            <li><a href="#finance">Finance</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#impact">Who's affected</a></li>
+            <li><a class="nav-picks" href="#picks">My picks</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+      <div class="progress" id="progress" aria-hidden="true"></div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="wrap">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span><span id="edition-label">This week's edition</span><span>Economy · Finance · Business</span></p>
+          <h1 id="hero-title"></h1>
+          <p class="lede" id="hero-lede"></p>
+          <ul class="big-picture" id="big-picture"></ul>
+        </div>
+        <div class="wrap">
+          <div class="tape" role="region" aria-label="Market snapshot" tabindex="0">
+            <ul id="tape"></ul>
+          </div>
+          <p class="tape-note" id="tape-note"></p>
+        </div>
+      </section>
+
+      <section class="section" id="pulse" aria-labelledby="pulse-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Global pulse</p>
+              <h2 id="pulse-title"><span class="mark">Where the world economy stands</span></h2>
+              <p class="desc">A one-line read on each major economy, with the number that matters most right now.</p>
+            </div>
+          </div>
+          <div class="pulse-grid" id="pulse-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="week" aria-labelledby="week-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Calendar</p>
+              <h2 id="week-title"><span class="mark">The dates that could move markets</span></h2>
+              <p class="desc">Three central banks, the first estimate of US growth and Big Tech earnings all land within four days, followed by the US midterms.</p>
+            </div>
+          </div>
+          <ol class="calendar" id="calendar"></ol>
+        </div>
+      </section>
+
+      <section class="section" id="economy" aria-labelledby="economy-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Section · Economy</p>
+              <h2 id="economy-title"><span class="mark">Economic news</span></h2>
+              <p class="desc">Growth, inflation, jobs, energy and central banks around the world, and why each story matters.</p>
+            </div>
+            <div data-lens-control></div>
+          </div>
+          <div class="stories" id="stories-economy"></div>
+        </div>
+      </section>
+
+      <section class="section" id="finance" aria-labelledby="finance-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Section · Finance</p>
+              <h2 id="finance-title"><span class="mark">Finance news</span></h2>
+              <p class="desc">Markets, earnings, bonds, IPOs, credit and crypto: where money is moving and why.</p>
+            </div>
+            <div data-lens-control></div>
+          </div>
+          <div class="stories" id="stories-finance"></div>
+        </div>
+      </section>
+
+      <section class="section" id="business" aria-labelledby="business-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Section · Business</p>
+              <h2 id="business-title"><span class="mark">Business news</span></h2>
+              <p class="desc">Mergers, acquisitions, break-ups and the deals reshaping whole industries.</p>
+            </div>
+            <div data-lens-control></div>
+          </div>
+          <div class="stories" id="stories-business"></div>
+
+          <h3 class="subhead" id="deals-title">Deal tracker</h3>
+          <p class="subdesc">Notable transactions from October 2026. Select a column heading to sort.</p>
+          <div class="table-wrap" role="region" aria-labelledby="deals-title" tabindex="0">
+            <table class="deals" id="deals">
+              <thead>
+                <tr>
+                  <th scope="col" data-key="acquirer" aria-sort="none"><button type="button">Buyer</button></th>
+                  <th scope="col" data-key="target" aria-sort="none"><button type="button">Target</button></th>
+                  <th scope="col" data-key="sector" aria-sort="none"><button type="button">Sector</button></th>
+                  <th scope="col" class="num" data-key="value" aria-sort="descending"><button type="button">Value</button></th>
+                  <th scope="col" data-key="status" aria-sort="none"><button type="button">Status</button></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="impact" aria-labelledby="impact-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">Who feels it</p>
+              <h2 id="impact-title"><span class="mark">What this week means for every part of the economy</span></h2>
+              <p class="desc">The same headlines land very differently on a saver, a borrower, a business owner or a government. Here is where each one stands.</p>
+            </div>
+          </div>
+          <div class="agents" id="agents"></div>
+        </div>
+      </section>
+
+      <section class="section picks" id="picks" aria-labelledby="picks-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="intro">
+              <p class="eyebrow">My picks · Personal view</p>
+              <h2 id="picks-title"><span class="mark">Where I'd put my money</span></h2>
+            </div>
+          </div>
+
+          <div class="nfa" id="disclaimer" role="note" aria-labelledby="nfa-title">
+            <div class="nfa-icon" aria-hidden="true">!</div>
+            <div>
+              <h3 id="nfa-title">This is not financial advice</h3>
+              <p>
+                Everything in this section is my <strong>personal opinion</strong>, shared for education and discussion only. It is
+                <strong>not a recommendation</strong> to buy, sell or hold any investment, and I am not a licensed or regulated financial adviser.
+              </p>
+              <p>
+                Investing involves risk, including the <strong>loss of some or all of the money you invest</strong>. Past performance does not
+                predict future results. Do your own research, consider your own circumstances, and speak to a regulated professional if you are
+                unsure. <strong>Any investing you do is entirely at your own risk.</strong>
+              </p>
+            </div>
+          </div>
+
+          <p class="picks-intro" id="picks-intro"></p>
+          <div class="ideas" id="ideas"></div>
+
+          <div class="picks-grid">
+            <div>
+              <h3>How I'd size it</h3>
+              <p class="note">An illustrative split for a long-term portfolio, not a model to copy. Your own mix depends on your goals, timeline and how much risk you can stomach.</p>
+              <ul class="alloc" id="alloc"></ul>
+            </div>
+            <div>
+              <h3>What I'm avoiding for now</h3>
+              <ul class="avoid" id="avoid"></ul>
+            </div>
+          </div>
+
+          <div class="picks-grid">
+            <div>
+              <h3>My ground rules</h3>
+              <ol class="rules" id="rules"></ol>
+            </div>
+            <div>
+              <h3>Disclosure</h3>
+              <p class="conflict" id="conflict"></p>
+            </div>
+          </div>
+
+          <p class="nfa-repeat"><strong>Reminder: not financial advice.</strong> These are personal ideas for education only. Invest at your own risk.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>
+          <a class="brand" href="#top"><span class="brand-reu">Reu</span>News</a>
+          <p class="footer-about">
+            Analysis of economic trends, finance and business news, and what they mean for individuals, investors and every other part of the
+            economy.
+          </p>
+          <p id="data-note"></p>
+        </div>
+        <div>
+          <h2>How this site works</h2>
+          <p>Each story links to the reporting it is based on. Analysis and "what it means" notes are ReuNews's own interpretation.</p>
+          <p>Edition: <span id="footer-edition"></span></p>
+        </div>
+        <p class="footer-legal">
+          <strong>Disclaimer:</strong> ReuNews is for information and education only and does not constitute financial, investment, tax or legal
+          advice. Nothing on this site is a recommendation to buy or sell any security. Investing carries risk, including loss of capital. Any
+          investing you do is at your own risk. © 2026 ReuNews.
+        </p>
+      </div>
+    </footer>
+
+    <noscript>
+      <p class="noscript">ReuNews needs JavaScript turned on to load this week's stories.</p>
+    </noscript>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
