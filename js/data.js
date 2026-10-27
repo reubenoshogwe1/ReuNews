@@ -1,5 +1,5 @@
 /*
- * Finconess edition data.
+ * FinConEss edition data.
  *
  * Everything the site shows lives in this one file. To publish a new edition,
  * update the `edition` block, then edit the stories, snapshot, calendar and
@@ -426,7 +426,7 @@ window.FINCONESS = {
       analysis:
         "This is one of the most anticipated listings of the year and could reopen the IPO window for other private AI companies. The amended filing with a price range will be the real test of valuation.",
       disclosure:
-        "Disclosure: Finconess's analysis was drafted with help from Claude, an AI model made by Anthropic. Keep that in mind when reading this item.",
+        "Disclosure: FinConEss's analysis was drafted with help from Claude, an AI model made by Anthropic. Keep that in mind when reading this item.",
       figures: [
         { label: "Ticker", value: "ANT" },
         { label: "H1 revenue", value: "≈ $16.3B" },
