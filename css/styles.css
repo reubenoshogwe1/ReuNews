@@ -1,5 +1,5 @@
 /*
- * ReuNews styles.
+ * Finconess styles.
  * Layout: an analyst's briefing book. A deep-purple masthead with a ticker
  * tape, then one readable column of sections, each opened by a bold heading
  * marked with a yellow highlighter stroke. Story cards sit in a two-column
@@ -315,8 +315,8 @@ a:hover {
 
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.375rem;
@@ -330,12 +330,15 @@ a:hover {
   color: var(--on-band);
 }
 
-.brand-reu {
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4em;
+  height: 1.4em;
   background: var(--yellow);
   color: var(--on-yellow);
-  padding: 0 6px;
-  border-radius: 4px;
-  margin-right: 2px;
+  border-radius: 6px;
+  line-height: 1;
 }
 
 .nav {

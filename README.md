@@ -1,8 +1,8 @@
-# ReuNews
+# Finconess
 
 A website that analyses economic trends, finance news and business deals, and explains what they mean for individuals, investors, businesses and every other part of the economy.
 
-> **Not financial advice.** ReuNews is educational analysis. Nothing on the site is a recommendation to buy or sell any investment. Any investing you do is at your own risk.
+> **Not financial advice.** Finconess is educational analysis. Nothing on the site is a recommendation to buy or sell any investment. Any investing you do is at your own risk.
 
 ## What's on the site
 
@@ -50,7 +50,7 @@ The site is written to stay on the "commentary and education" side of financial 
 - **Disclose holdings.** If you own shares in any company named on the site, say so next to that story. Never write about something to move its price for your own benefit.
 - **Attribute anything uncertain.** Use "according to", "reported" or "analysts expect" for claims you haven't confirmed, especially about named people and companies. Don't repeat takeover rumours.
 - **Keep the disclaimers.** The top strip, the "This is not financial advice" box, the per-idea labels and the Legal information footer should stay on every edition.
-- **Keep the footer statements true.** The footer says ReuNews has no adverts or affiliate links, is not paid by companies it mentions, uses AI to help draft content, and that the author is not a licensed adviser. Update it if any of that changes.
+- **Keep the footer statements true.** The footer says Finconess has no adverts or affiliate links, is not paid by companies it mentions, uses AI to help draft content, and that the author is not a licensed adviser. Update it if any of that changes.
 - **No tracking without consent.** The site sets no cookies and loads nothing from third parties (fonts are self-hosted in `fonts/`). Adding analytics, ads or embeds would need a cookie/consent notice and a privacy policy update.
 - **Write in your own words.** Summarise reporting and link to it; don't copy articles, images or charts.
 

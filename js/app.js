@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var D = window.REUNEWS;
+  var D = window.FINCONESS;
   if (!D) return;
 
   var LENSES = [
@@ -17,7 +17,7 @@
   var CONVICTION = ["", "Low", "Medium", "High"];
 
   var state = {
-    lens: readStore("reunews-lens", "individuals"),
+    lens: readStore("finconess-lens", "individuals"),
     sort: { key: "value", dir: "desc" },
   };
   if (!LENSES.some(function (l) { return l.key === state.lens; })) state.lens = "individuals";
@@ -241,7 +241,7 @@
   function setLens(key) {
     if (key === state.lens) return;
     state.lens = key;
-    writeStore("reunews-lens", key);
+    writeStore("finconess-lens", key);
     var info = lensInfo(key);
 
     $all("[data-lens]").forEach(function (btn) {
@@ -406,7 +406,7 @@
     $("#theme-toggle").addEventListener("click", function () {
       var next = effectiveTheme() === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
-      writeStore("reunews-theme", next);
+      writeStore("finconess-theme", next);
       syncThemeButton();
     });
     if (window.matchMedia) {

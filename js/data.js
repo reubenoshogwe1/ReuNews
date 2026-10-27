@@ -1,5 +1,5 @@
 /*
- * ReuNews edition data.
+ * Finconess edition data.
  *
  * Everything the site shows lives in this one file. To publish a new edition,
  * update the `edition` block, then edit the stories, snapshot, calendar and
@@ -8,7 +8,7 @@
  * Lens keys used on every story: individuals, investors, businesses.
  * Impact values: "up" (helps), "down" (hurts), "mixed".
  */
-window.REUNEWS = {
+window.FINCONESS = {
   edition: {
     date: "2026-10-27",
     label: "Tuesday 27 October 2026",
@@ -426,7 +426,7 @@ window.REUNEWS = {
       analysis:
         "This is one of the most anticipated listings of the year and could reopen the IPO window for other private AI companies. The amended filing with a price range will be the real test of valuation.",
       disclosure:
-        "Disclosure: ReuNews's analysis was drafted with help from Claude, an AI model made by Anthropic. Keep that in mind when reading this item.",
+        "Disclosure: Finconess's analysis was drafted with help from Claude, an AI model made by Anthropic. Keep that in mind when reading this item.",
       figures: [
         { label: "Ticker", value: "ANT" },
         { label: "H1 revenue", value: "≈ $16.3B" },
