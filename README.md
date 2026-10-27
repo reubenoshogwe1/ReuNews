@@ -41,6 +41,21 @@ All content lives in [`js/data.js`](js/data.js). To update the site each week:
 
 When a section has an odd number of stories, the first one is shown full width automatically.
 
+## Keeping it legally safe
+
+The site is written to stay on the "commentary and education" side of financial rules. When you update it, keep these in place:
+
+- **No specific products in "My ideas".** Ideas name types of investment (for example "broad semiconductor funds"), never tickers, funds or single stocks. Naming a specific product with reasons to buy it can count as an investment recommendation or a financial promotion in some countries.
+- **Impersonal, never "you should buy".** Keep ideas framed as the author's own view, with risks and "what would change my mind".
+- **Disclose holdings.** If you own shares in any company named on the site, say so next to that story. Never write about something to move its price for your own benefit.
+- **Attribute anything uncertain.** Use "according to", "reported" or "analysts expect" for claims you haven't confirmed, especially about named people and companies. Don't repeat takeover rumours.
+- **Keep the disclaimers.** The top strip, the "This is not financial advice" box, the per-idea labels and the Legal information footer should stay on every edition.
+- **Keep the footer statements true.** The footer says ReuNews has no adverts or affiliate links, is not paid by companies it mentions, uses AI to help draft content, and that the author is not a licensed adviser. Update it if any of that changes.
+- **No tracking without consent.** The site sets no cookies and loads nothing from third parties (fonts are self-hosted in `fonts/`). Adding analytics, ads or embeds would need a cookie/consent notice and a privacy policy update.
+- **Write in your own words.** Summarise reporting and link to it; don't copy articles, images or charts.
+
+This is general guidance, not legal advice. Rules differ by country. If you plan to make money from the site (ads, subscriptions, affiliate links), check the rules where you live first.
+
 ## Project structure
 
 ```
@@ -48,4 +63,5 @@ index.html       Page structure and the static disclaimer text
 css/styles.css   Design tokens (light and dark), layout and components
 js/data.js       This edition's content
 js/app.js        Renders the content and handles the lens switch, theme, sorting and navigation
+fonts/           Self-hosted fonts and their SIL Open Font License files
 ```

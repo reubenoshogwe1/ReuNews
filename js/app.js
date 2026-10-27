@@ -349,7 +349,7 @@
           '<span class="conviction" aria-label="Conviction: ' + CONVICTION[idea.conviction] + '">' + dots + " " + CONVICTION[idea.conviction] + "</span>" +
           "</div>" +
           "<h3>" + esc(idea.name) + "</h3>" +
-          '<ul class="examples" aria-label="Example ways to get exposure">' +
+          '<ul class="examples" aria-label="Types of investment">' +
           idea.examples.map(function (ex) { return "<li>" + esc(ex) + "</li>"; }).join("") +
           "</ul>" +
           "<dl>" +
@@ -365,13 +365,12 @@
 
     $("#alloc").innerHTML = W.allocation
       .map(function (a) {
-        var per10k = (a.pct * 100).toLocaleString("en-GB");
         return (
           '<li tabindex="0">' +
           '<span class="alloc-name">' + esc(a.name) + "</span>" +
           '<span class="alloc-track" aria-hidden="true"><span class="alloc-bar" style="width:' + Number(a.pct) + '%"></span></span>' +
           '<span class="alloc-pct">' + Number(a.pct) + "%</span>" +
-          '<span class="alloc-tip" role="tooltip">' + Number(a.pct) + "% · " + per10k + " of every 10,000 invested</span>" +
+          '<span class="alloc-tip" role="tooltip">' + Number(a.pct) + "% of my illustrative split</span>" +
           "</li>"
         );
       })
@@ -385,6 +384,7 @@
 
     $("#rules").innerHTML = W.rules.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("");
     $("#conflict").textContent = W.conflictNote;
+    $("#holdings").textContent = W.holdingsNote;
   }
 
   // ---------- Theme ----------

@@ -27,7 +27,7 @@ window.REUNEWS = {
       },
       {
         title: "Central banks are tightening into a slowdown",
-        text: "The Fed raised rates in September for the first time since 2023. The ECB and Bank of Japan are eyeing December hikes.",
+        text: "The Fed raised rates in September for the first time since 2023. Markets expect the ECB and Bank of Japan to hike in December.",
       },
       {
         title: "AI is the growth engine, and the biggest risk",
@@ -70,7 +70,7 @@ window.REUNEWS = {
       status: "Improving",
       tone: "good",
       metric: "PMI 53.1 · CPI 3.5%",
-      note: "Business activity is at an 8-month high, but inflation is expected to climb toward 3.75% in Q4.",
+      note: "Business activity is at an 8-month high, but the Bank of England expects inflation to average about 3.75% in Q4.",
     },
     {
       region: "China",
@@ -142,7 +142,7 @@ window.REUNEWS = {
       ],
       lens: {
         individuals:
-          "Credit card and variable loan rates will stay high and could rise again in December. Paying down variable-rate debt is the safest return available.",
+          "Credit card and variable loan rates will stay high and could rise again in December. Paying down variable-rate debt cuts what you pay in interest.",
         investors:
           "Listen for the tone of the press conference. Hawkish language lifts short-term yields and tends to pressure growth stocks.",
         businesses:
@@ -219,9 +219,9 @@ window.REUNEWS = {
       date: "26 Oct",
       title: "Oil climbs back above $115 as attacks on Saudi infrastructure revive war fears",
       summary:
-        "Brent crude settled at $115.81 on Monday after closing at $116.72 on Friday, its highest close since late April. Yemen's Houthi group claimed strikes on pumping stations along Saudi Arabia's East-West pipeline. Reports that the US may resume strikes on Iran added to the jitters. US crude (WTI) is around $101.",
+        "Brent crude settled at $115.81 on Monday after closing at $116.72 on Friday, its highest close since late April. Yemen's Houthi group claimed strikes on pumping stations along Saudi Arabia's East-West pipeline, which Saudi Arabia did not confirm. Reports that the US may resume strikes on Iran added to the jitters. US crude (WTI) is around $101.",
       analysis:
-        "Crude flows through the Strait of Hormuz have recovered to pre-war levels since the US–Iran war began on 28 February, so today's price is mostly a risk premium, not lost barrels. Diplomacy could deflate that premium quickly, and escalation could add to it. Diesel is the pressure point: EU pump prices hit records in October.",
+        "Crude flows through the Strait of Hormuz have recovered to pre-war levels, according to tanker-tracking data, since the war that began with US and Israeli strikes on Iran on 28 February. So today's price is mostly a risk premium, not lost barrels. Diplomacy could deflate that premium quickly, and escalation could add to it. Diesel is the pressure point: EU pump prices hit records in October.",
       figures: [
         { label: "Brent", value: "$115.81" },
         { label: "WTI", value: "≈ $101" },
@@ -279,7 +279,7 @@ window.REUNEWS = {
       summary:
         "China's economy grew 4.5% in the third quarter, up from 4.3% and slightly ahead of forecasts. Exports jumped 36.3% year on year, led by integrated circuits tied to AI demand. At home, retail sales grew just 1.1% in September and property investment is down 20.6% this year. Beijing has held off on large-scale stimulus.",
       analysis:
-        "Economists call it a K-shaped economy: high-tech exporters are thriving while households and the property market stall. Trade friction is building too. The EU and China have agreed quotas on Chinese hybrid car exports to Europe.",
+        "Economists call it a K-shaped economy: high-tech exporters are thriving while households and the property market stall. Trade friction is building too. According to Deloitte, the EU and China have agreed quotas on Chinese hybrid car exports to Europe.",
       figures: [
         { label: "Q3 GDP", value: "+4.5%" },
         { label: "Q3 exports", value: "+36.3%" },
@@ -306,7 +306,7 @@ window.REUNEWS = {
       date: "26 Oct",
       title: "Brazil's markets plunge after Lula wins re-election",
       summary:
-        "Brazil's main stock index closed down about 13.9% on Monday after a circuit breaker briefly halted trading. The real fell as much as 12% against the dollar in spot trading, and the finance ministry cancelled government bond auctions. Investors had bet on a win for Flávio Bolsonaro and tighter government spending. Bolsonaro has not conceded.",
+        "Brazil's main stock index closed down about 13.9% on Monday after a circuit breaker briefly halted trading. The real fell as much as 12% against the dollar in spot trading, and the finance ministry cancelled government bond auctions. Investors had bet on a win for Flávio Bolsonaro and tighter government spending. Bolsonaro had not conceded at the time of reporting.",
       analysis:
         "This is a fiscal-credibility shock: markets doubt the government will control spending and debt. Sharp sell-offs can overshoot, but the fix is a credible budget signal, which takes time. Watch for the new government's first fiscal announcements.",
       figures: [
@@ -365,7 +365,7 @@ window.REUNEWS = {
       date: "23 Oct",
       title: "Most companies beat earnings forecasts, but by the slimmest margin in years",
       summary:
-        "With about a quarter of the S&P 500 reported, 83% of companies have beaten earnings estimates, but by just 2.1% on average against a five-year average of 7.5%. Earnings are still growing more than 25% year on year for the third quarter in a row. Micron and Nvidia alone account for about 36% of the expected growth.",
+        "With about a quarter of the S&P 500 reported, 83% of companies have beaten earnings estimates, but by just 2.1% on average against a five-year average of 7.5%. Earnings are still growing more than 25% year on year for the third quarter in a row. Micron and Nvidia alone account for about 36% of the expected growth, according to Citadel Securities.",
       analysis:
         "Expectations are high and growth is concentrated in a handful of chip and tech names. Small beats leave little room for disappointment. Companies carrying about 47% of the index's weight report between 28 October and 3 November.",
       figures: [
@@ -509,12 +509,12 @@ window.REUNEWS = {
       date: "23 Oct",
       title: "Gold and bitcoin slump while cash and bonds pay more",
       summary:
-        "Gold closed at $3,995.81 on Friday, below $4,000 for the first time since July and far from its record near $5,595 in January. Bitcoin is around $80,000, roughly 36% below its October 2025 record of about $126,000. Both rank among 2026's worst-performing major assets.",
+        "Gold closed at $3,995.81 on Friday, below $4,000 for the first time since July and far from the record of about $5,595 reported in January. Bitcoin is around $80,000, roughly 36% below its October 2025 record of about $126,000. Both rank among 2026's worst-performing major assets.",
       analysis:
         "Our reading: when cash and bonds pay 4–5%, assets that pay no income become less attractive to hold. A turn in Fed policy toward cuts would remove that headwind, but there is no sign of that yet.",
       figures: [
         { label: "Gold", value: "$3,995.81" },
-        { label: "Gold record", value: "≈ $5,595" },
+        { label: "Jan. record", value: "≈ $5,595" },
         { label: "Bitcoin", value: "≈ $80,000" },
       ],
       lens: {
@@ -566,13 +566,13 @@ window.REUNEWS = {
       id: "skydance",
       region: "Media",
       date: "6 Oct",
-      title: "Paramount completes its $110 billion Warner Bros. Discovery takeover and becomes Skydance",
+      title: "Paramount completes its Warner Bros. Discovery takeover and becomes Skydance",
       summary:
-        "The combined company, renamed Skydance, now trades on the NYSE as SKYD and owns Paramount Pictures, Warner Bros., CBS, CNN, HBO, Paramount+ and HBO Max. To settle legal challenges, it agreed to spend about $300 million a year on US film production, release 30 to 32 films a year for five years and set up an editorial oversight committee for CBS and CNN.",
+        "Most reports value the deal at about $110 billion including debt. The combined company, renamed Skydance, now trades on the NYSE as SKYD and owns Paramount Pictures, Warner Bros., CBS, CNN, HBO, Paramount+ and HBO Max. To settle legal challenges, it agreed to spend about $300 million a year on US film production, release 30 to 32 films a year for five years and set up an editorial oversight committee for CBS and CNN.",
       analysis:
-        "This is the year's largest completed deal with a disclosed value. The work now is integration: cutting overlapping costs, merging streaming services and keeping creative talent.",
+        "It is one of the year's largest completed deals. The work now is integration: cutting overlapping costs, merging streaming services and keeping creative talent.",
       figures: [
-        { label: "Deal value", value: "≈ $110B" },
+        { label: "Reported value", value: "≈ $110B" },
         { label: "Revenue", value: "≈ $70B/yr" },
         { label: "Ticker", value: "SKYD" },
       ],
@@ -654,7 +654,7 @@ window.REUNEWS = {
       summary:
         "According to a Financial Times report, the two sides had agreed on the main financial terms, which valued J&J's hip and knee unit at up to $22 billion. Talks broke down when Smith & Nephew refused J&J's choice of chief executive. J&J is now reported to be leaning toward spinning off its orthopaedics business instead.",
       analysis:
-        "Governance can sink a deal even after the price is agreed. A spin-off could still unlock value for J&J shareholders, and Smith & Nephew remains a possible target.",
+        "Governance can sink a deal even after the price is agreed. One analyst quoted in the coverage said it would not be surprising if the two sides eventually returned to talks.",
       figures: [
         { label: "Unit value", value: "Up to $22B" },
         { label: "J&J stake", value: "50.1%" },
@@ -664,7 +664,7 @@ window.REUNEWS = {
         individuals:
           "No direct effect on patients or products for now.",
         investors:
-          "A J&J orthopaedics spin-off is the next thing to watch. Spin-offs can create value but take time to settle.",
+          "J&J's reported plan to spin off its orthopaedics business is the next thing to watch. Spin-offs can take time to settle.",
         businesses:
           "Leadership terms belong early in deal talks, not at the end.",
       },
@@ -708,7 +708,7 @@ window.REUNEWS = {
       date: "2026",
       title: "2026 is shaping up as a record year for megadeals",
       summary:
-        "Mergermarket counted 31 deals worth $10 billion or more at the start of the year, a record opening tally. Announced deal value hit a record $2.8 trillion in the first half, up 48% on a year earlier, even as the number of deals fell. The largest is SpaceX's takeover of xAI, reported at about $250 billion, though no value was disclosed.",
+        "Mergermarket counted 31 deals worth $10 billion or more at the start of the year, a record opening tally. Industry data shows announced deal value hit a record $2.8 trillion in the first half, up 48% on a year earlier, even as the number of deals fell. The largest is SpaceX's takeover of xAI, reported at about $250 billion, though no value was disclosed.",
       analysis:
         "Companies are buying scale: fewer deals, but much bigger ones. Higher interest rates have not stopped them, partly because large firms can pay with shares or cash on hand.",
       figures: [
@@ -733,7 +733,7 @@ window.REUNEWS = {
   ],
 
   deals: [
-    { acquirer: "Paramount Skydance", target: "Warner Bros. Discovery", value: 110000, sector: "Media", status: "Completed 6 Oct", state: "done" },
+    { acquirer: "Paramount Skydance", target: "Warner Bros. Discovery", value: 110000, valueNote: "reported, incl. debt", sector: "Media", status: "Completed 6 Oct", state: "done" },
     { acquirer: "J&J (orthopaedics unit)", target: "Smith & Nephew", value: 22000, valueNote: "unit value", sector: "Medtech", status: "Talks collapsed", state: "dead" },
     { acquirer: "Proofpoint (Thoma Bravo)", target: "Varonis", value: 6300, sector: "Cybersecurity", status: "Pending, H1 2027", state: "pending" },
     { acquirer: "Viatris", target: "Pacira BioSciences", value: 1650, sector: "Pharma", status: "Pending, end 2026", state: "pending" },
@@ -805,14 +805,14 @@ window.REUNEWS = {
 
   watchlist: {
     intro:
-      "These are the ideas I'm personally considering after reading this week's news. For each one I've written down why, the main risks, and what would make me change my mind.",
+      "These are the ideas I'm personally considering for my own money after reading this week's news. They describe types of investment, not specific products. For each one I've written down why, the main risks, and what would make me change my mind.",
     ideas: [
       {
         name: "Cash that pays",
         role: "Ballast",
-        examples: ["T-bill ETFs (e.g. SGOV, BIL)", "Money-market funds", "High-yield savings"],
-        why: "The Fed is at 3.75–4.00% and leaning toward another hike, so short-term cash keeps earning a decent rate with very little risk.",
-        risk: "With inflation at 3.7%, the real return is close to zero. Rates fall quickly if the Fed changes course.",
+        examples: ["Short-term government bond funds", "Money-market funds", "Savings accounts"],
+        why: "The Fed is at 3.75–4.00% and leaning toward another hike, so short-term cash keeps earning a decent rate with relatively low risk.",
+        risk: "Low-risk is not no-risk: funds can still lose value. With inflation at 3.7%, the real return is close to zero, and rates fall quickly if the Fed changes course.",
         changeMind: "The Fed signals rate cuts.",
         conviction: 3,
         horizon: "0–12 months",
@@ -820,7 +820,7 @@ window.REUNEWS = {
       {
         name: "Inflation-linked bonds",
         role: "Inflation hedge",
-        examples: ["TIPS funds (e.g. TIP, SCHP)", "Local inflation-linked gilts or bonds"],
+        examples: ["Inflation-linked government bond funds"],
         why: "Headline inflation is 3.7%, consumers expect 4.7%, and oil is above $115. These bonds adjust with inflation.",
         risk: "They lose value if real yields keep rising. If oil drops, the inflation scare may fade.",
         changeMind: "Oil falls back below $90 and core inflation cools.",
@@ -830,8 +830,8 @@ window.REUNEWS = {
       {
         name: "AI hardware and memory",
         role: "Growth",
-        examples: ["Semiconductor ETFs (e.g. SMH, SOXX)", "Memory makers such as Micron"],
-        why: "Micron says memory supply stays tight through 2028, and chipmakers are delivering much of the S&P 500's earnings growth.",
+        examples: ["Broad semiconductor funds"],
+        why: "Memory supply is expected to stay tight through 2028, and chipmakers are delivering much of the S&P 500's earnings growth.",
         risk: "It's a crowded, cyclical trade. Worries about AI debt, or weak Big Tech capex guidance this week, could hit it hard.",
         changeMind: "Microsoft, Alphabet or Amazon cut capex plans, or memory prices start falling.",
         conviction: 2,
@@ -840,8 +840,8 @@ window.REUNEWS = {
       {
         name: "Cybersecurity",
         role: "Growth",
-        examples: ["Cybersecurity ETFs (e.g. CIBR, HACK)"],
-        why: "AI makes data security more valuable, and buyers like Proofpoint are paying premiums of more than 50% to consolidate the sector.",
+        examples: ["Broad cybersecurity funds"],
+        why: "AI makes data security more valuable, and recent deals show buyers paying large premiums to consolidate the sector.",
         risk: "Valuations are already high and deals can fall apart. Software multiples suffer when yields rise.",
         changeMind: "Large security deals dry up, or growth at the big security vendors slows sharply.",
         conviction: 2,
@@ -850,7 +850,7 @@ window.REUNEWS = {
       {
         name: "Energy, as a hedge",
         role: "Hedge",
-        examples: ["Broad energy ETFs (e.g. XLE)", "Pipeline and midstream funds"],
+        examples: ["Broad energy-sector funds"],
         why: "Brent is above $115 on Middle East risk. A small position offsets some of what I lose at the pump if prices keep rising.",
         risk: "This is effectively a geopolitical bet. A ceasefire or diplomatic deal could cut prices quickly.",
         changeMind: "A durable de-escalation in the Gulf.",
@@ -860,8 +860,8 @@ window.REUNEWS = {
       {
         name: "A diversified global core",
         role: "Foundation",
-        examples: ["All-world index funds (e.g. VT, VWRL)"],
-        why: "None of the themes above is certain. A low-cost global index fund keeps the plan working even if every theme turns out wrong.",
+        examples: ["Low-cost global index funds"],
+        why: "None of the themes above is certain. A low-cost global index fund spreads money across thousands of companies, so the plan does not depend on any one theme being right.",
         risk: "It follows the whole market down in a sell-off and is heavily weighted toward US tech.",
         changeMind: "Nothing in this week's news. This is a long-term holding.",
         conviction: 3,
@@ -905,5 +905,7 @@ window.REUNEWS = {
     ],
     conflictNote:
       "Not on this list: the Anthropic IPO. This site's analysis was drafted with help from Claude, an Anthropic AI model, so I've left it out to avoid a conflict of interest.",
+    holdingsNote:
+      "Companies named elsewhere on this site appear only as news, not as recommendations. If I hold shares in a company named on this site, I'll say so next to that story.",
   },
 };

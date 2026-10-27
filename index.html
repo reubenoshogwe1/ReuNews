@@ -14,12 +14,6 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2323104a'/%3E%3Cpath d='M7 22l6-7 5 4 7-9' stroke='%23facc15' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
-    />
     <link rel="stylesheet" href="css/styles.css" />
     <script>
       // Apply a saved theme before first paint to avoid a flash.
@@ -35,7 +29,7 @@
     <div class="strip" role="note">
       <div class="wrap">
         <span><strong>Not financial advice.</strong> ReuNews is educational analysis. Any investing you do is at your own risk.</span>
-        <a href="#disclaimer">Read the full disclaimer</a>
+        <a href="#legal">Read the full disclaimer</a>
       </div>
     </div>
 
@@ -50,7 +44,7 @@
             <li><a href="#finance">Finance</a></li>
             <li><a href="#business">Business</a></li>
             <li><a href="#impact">Who's affected</a></li>
-            <li><a class="nav-picks" href="#picks">My picks</a></li>
+            <li><a class="nav-picks" href="#picks">My ideas</a></li>
           </ul>
         </nav>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
@@ -179,7 +173,7 @@
         <div class="wrap">
           <div class="section-head">
             <div class="intro">
-              <p class="eyebrow">My picks · Personal view</p>
+              <p class="eyebrow">Personal opinion · Not advice</p>
               <h2 id="picks-title"><span class="mark">Where I'd put my money</span></h2>
             </div>
           </div>
@@ -197,6 +191,11 @@
                 predict future results. Do your own research, consider your own circumstances, and speak to a regulated professional if you are
                 unsure. <strong>Any investing you do is entirely at your own risk.</strong>
               </p>
+              <p>
+                These ideas are general and not tailored to anyone's circumstances. They describe types of investment, not specific products.
+                Investments, taxes and rules differ by country, so some may not be available or suitable where you live. My views can change at
+                any time without notice.
+              </p>
             </div>
           </div>
 
@@ -206,7 +205,7 @@
           <div class="picks-grid">
             <div>
               <h3>How I'd size it</h3>
-              <p class="note">An illustrative split for a long-term portfolio, not a model to copy. Your own mix depends on your goals, timeline and how much risk you can stomach.</p>
+              <p class="note">An illustrative split of my own long-term money, not a model for anyone else to copy. The right mix depends on each person's goals, timeline and circumstances.</p>
               <ul class="alloc" id="alloc"></ul>
             </div>
             <div>
@@ -221,7 +220,8 @@
               <ol class="rules" id="rules"></ol>
             </div>
             <div>
-              <h3>Disclosure</h3>
+              <h3>Disclosures</h3>
+              <p class="conflict" id="holdings"></p>
               <p class="conflict" id="conflict"></p>
             </div>
           </div>
@@ -246,11 +246,58 @@
           <p>Each story links to the reporting it is based on. Analysis and "what it means" notes are ReuNews's own interpretation.</p>
           <p>Edition: <span id="footer-edition"></span></p>
         </div>
-        <p class="footer-legal">
-          <strong>Disclaimer:</strong> ReuNews is for information and education only and does not constitute financial, investment, tax or legal
-          advice. Nothing on this site is a recommendation to buy or sell any security. Investing carries risk, including loss of capital. Any
-          investing you do is at your own risk. © 2026 ReuNews.
-        </p>
+        <section class="legal" id="legal" aria-labelledby="legal-title">
+          <h2 id="legal-title">Legal information</h2>
+          <div class="legal-grid">
+            <div>
+              <h3>Not financial advice</h3>
+              <p>
+                ReuNews is for general information and education only. It is not financial, investment, tax or legal advice, and nothing on this
+                site is an offer, solicitation or recommendation to buy, sell or hold any security or other investment. Reading ReuNews does not
+                create an adviser–client relationship. The author is not a licensed or regulated financial adviser. Investing carries risk,
+                including the loss of some or all of your money. Any investing you do is at your own risk.
+              </p>
+            </div>
+            <div>
+              <h3>Accuracy</h3>
+              <p>
+                Stories are based on public reporting, which is linked from each story. Facts are kept separate from analysis, which is
+                ReuNews's own opinion. Information may be incomplete, out of date or wrong, and market figures are not live prices. Always check
+                the original source before relying on anything here. To the extent permitted by law, ReuNews accepts no liability for any loss
+                arising from use of this site.
+              </p>
+            </div>
+            <div>
+              <h3>Independence</h3>
+              <p>
+                ReuNews carries no adverts, sponsored content or affiliate links, and is not paid by any company it mentions. ReuNews is not
+                affiliated with or endorsed by any company, fund or organisation named on this site.
+              </p>
+            </div>
+            <div>
+              <h3>Use of AI</h3>
+              <p>
+                ReuNews uses an AI tool, Claude by Anthropic, to help research and draft its content. Because Anthropic is mentioned in this
+                edition's news, ReuNews does not include Anthropic in its personal investment ideas.
+              </p>
+            </div>
+            <div>
+              <h3>Trademarks and links</h3>
+              <p>
+                Company, fund and index names and stock tickers are trademarks of their respective owners and are used only to identify them.
+                Links to other websites are provided for reference. ReuNews does not control and is not responsible for their content.
+              </p>
+            </div>
+            <div>
+              <h3>Privacy</h3>
+              <p>
+                ReuNews does not use cookies, analytics or trackers, and does not collect personal data. Your theme and "Read it as" choices are
+                saved only in your own browser. Fonts are served from this site, so loading a page sends nothing to third parties.
+              </p>
+            </div>
+          </div>
+          <p class="footer-legal">© 2026 ReuNews. Original text and analysis. Fonts are used under the SIL Open Font License.</p>
+        </section>
       </div>
     </footer>
 

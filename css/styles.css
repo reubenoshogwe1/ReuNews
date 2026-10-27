@@ -6,6 +6,63 @@
  * grid on wide screens.
  */
 
+/* Fonts are self-hosted (SIL Open Font License) so visitors' browsers never contact a third party. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/bricolage-grotesque-latin-opsz-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2");
+}
+
 :root {
   /* Colour */
   --paper: #fbfaff;
@@ -1460,8 +1517,12 @@ table.deals {
   border: 1px dashed var(--line-strong);
   border-radius: 8px;
   padding: 14px 16px;
-  margin-top: 20px;
+  margin-top: 16px;
   background: var(--surface);
+}
+
+.conflict + .conflict {
+  margin-top: 10px;
 }
 
 .nfa-repeat {
@@ -1495,6 +1556,7 @@ table.deals {
 
 .site-footer .brand {
   font-size: 1.5rem;
+  color: var(--on-band);
 }
 
 .footer-about {
@@ -1520,10 +1582,43 @@ table.deals {
   color: var(--yellow);
 }
 
-.footer-legal {
+.legal {
   grid-column: 1 / -1;
   border-top: 1px solid var(--band-line);
-  padding-top: 20px;
+  padding-top: 28px;
+  display: grid;
+  gap: 20px;
+}
+
+.legal > h2 {
+  font-size: var(--step-1);
+  margin: 0;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 32px;
+}
+
+.legal-grid > div {
+  min-width: 0;
+}
+
+.legal h3 {
+  font-size: 0.9375rem;
+  color: var(--on-band);
+  margin-bottom: 6px;
+}
+
+.legal p {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.footer-legal {
+  border-top: 1px solid var(--band-line);
+  padding-top: 16px;
   font-size: 0.8125rem;
 }
 
@@ -1572,6 +1667,16 @@ table.deals {
   }
 
   .site-footer .wrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .legal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .legal-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
